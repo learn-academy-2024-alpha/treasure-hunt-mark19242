@@ -15,12 +15,18 @@ const App = () => {
     "?"
   ])
 
+  const handleGamePlay = (currentSquare) => {
+      alert(currentSquare)
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
       <div className="board">
       {board.map((square, index)=>{
-        return <Square square={square} />
+        return <Square square={square} 
+        index={index} 
+        handleGamePlay={handleGamePlay} />
       })}
       </div>
     </>
